@@ -1,0 +1,85 @@
+.hero-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #003580;
+    width: 100%;
+    position: relative;
+    height: 38vh;
+}
+.header-p{
+    color: #fff;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 3rem 0;
+    width: 68%;
+}
+.hero h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+.member-btn{
+    width: 120px;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #0071c2;
+    margin-bottom: 60px;
+}
+.search-filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    align-self: center;
+    bottom: -25px;
+    border: .2px solid gold;
+    gap: 10px;
+    padding: 0 20px;
+
+}
+.search-filter select{
+    padding: 0 20px;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: auto;
+}
+.location{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    width: 200px;
+    padding: 0 10px;
+    gap: 5px;
+}
+.search-filter input{
+    outline: none;
+    border: none;
+   background-color: #fff;
+   width: 100%;
+}
+span{
+    color: gray;
+}
+.dates{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search{
+    padding: 10px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  
+  }

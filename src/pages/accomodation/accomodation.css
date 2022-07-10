@@ -1,0 +1,14 @@
+.accomodation-card{
+    display: flex;
+    width: 70%;
+    height: 50vh;
+    margin: 5rem auto;
+    border: 1px solid gray;
+    padding: 25px;
+    gap: 2rem;
+    
+}
+.accomodation-card>img{
+    height: 100%;
+    width: auto;
+}

@@ -1,0 +1,25 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    color: white;
+    width: 68%;
+    margin-top: 10px;
+    
+}
+.navbar p{
+    color: #fff;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.btn button{
+    outline: none;
+    border: none;
+    padding: 10px 50px;
+    color: #003580;
+
+}

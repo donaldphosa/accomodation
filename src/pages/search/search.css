@@ -1,0 +1,38 @@
+.searched{
+    padding-top: 3rem;
+}
+.container{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 2.5rem 14rem;
+    border: 1px solid #ccc;
+}
+.container img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+span{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.ratings{
+    color: orangered;
+}
+p{
+    color: green;
+}
+h4{
+    color: rgb(80, 75, 75);
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.action-button{
+    padding: 10px 20px;
+}

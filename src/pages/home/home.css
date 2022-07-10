@@ -1,0 +1,17 @@
+.services-main{
+    padding: 0 15rem;
+    margin: 50px 0;
+}
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+.hotels{
+    padding: 0 12rem;
+}
+.hotels h3{
+    margin-left: 2.5rem;
+    color: rgb(49, 46, 46);
+}
+
