@@ -5,7 +5,8 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    margin: 2.5rem 14rem;
+    margin: 2.5rem auto;
+    width: 70%;
     border: 1px solid #ccc;
 }
 .container img{
@@ -31,7 +32,7 @@ h4{
 .detail{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 .action-button{
     padding: 10px 20px;

@@ -14,7 +14,7 @@ function Search({data}) {
             <div className='detail'>
             <h4>{data.name}</h4>
             <p className='ratings'>{data.ratings} Rating</p>
-            <span>R {data.price.toFixed(2)}</span>
+            <span>R {data.price}</span>
             <span><GoLocation/><p>{data.location}</p></span>
             <button
             onClick={()=>{

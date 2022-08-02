@@ -6,6 +6,7 @@
     color: white;
     width: 68%;
     margin-top: 10px;
+    position: relative;
     
 }
 .navbar p{
@@ -22,4 +23,32 @@
     padding: 10px 50px;
     color: #003580;
 
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.user>p{
+    margin-left: 20px;
+     cursor: pointer;
+}
+.user>p:hover{
+    color: #f2ecec;
+    font-weight: bold;
+   
+}
+.sett{
+    display: flex;
+    position: absolute;
+    top: 2rem;
+    flex-direction: column;
+    right: 0rem;
+    align-items: flex-end;
+    margin-top: 1rem;
+   
+    
+}
+.sett>p{
+    cursor: pointer;
+    margin-top: 0.5rem;
 }

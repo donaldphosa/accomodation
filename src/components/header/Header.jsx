@@ -1,18 +1,29 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import Navbar from '../navbar/Navbar'
 import './header.css'
 import { GoLocation } from 'react-icons/go';
-import { useState } from 'react';
 import Moment from 'moment';
 import {useNavigate} from 'react-router-dom'
 
-function Header({info,setInfo}) {
+
+
+function Header({
+  setLogged,
+  logged,
+  setAccountAccess,
+  setTab,
+  tab,
+  Data,
+  setSearchInfo
+}
+  ) {
  
   const [location,setLocation] = useState('all')
   const [price, setPrice] = useState(0);
   const [ratings, setRatings] = useState(0)
   const [type, setType] = useState('all')
   const navigate = useNavigate()
+
 
   const datesData={
     endDate: Moment().format("MM/DD/YYYY"),
@@ -21,49 +32,51 @@ function Header({info,setInfo}) {
 const [dates,setDates]=useState(datesData)
 
 
-function getNumberDays(){
-    const startDate = new Date(dates.startDate)
-    const endDate = new Date(dates.endDate)
-const days = Math.ceil(Math.abs(startDate - endDate)/(1000*60*60*24))
-  return days
-}
+// function getNumberDays(){
+//     const startDate = new Date(dates.startDate)
+//     const endDate = new Date(dates.endDate)
+// const days = Math.ceil(Math.abs(startDate - endDate)/(1000*60*60*24))
+//   return days
+// }
+
 
 function filterAccomodation(){
   const id = 'searched'
-  const firstFiltered = info.filter((data)=>{
-    if(location === 'all'){
+  const firstFiltered = Data.filter((data)=>{
+    if(location === 'all'||location===''){
       return data
     }
     return data.location.toLowerCase() === location.toLowerCase()
   })
 const secondFiltered = firstFiltered.filter((filter)=>{
-  if(price === 0){
+  if(price === 0||price===''){
     return firstFiltered
   }
   return filter.price <= price;
 })
 const thirdFiltered = secondFiltered.filter((filter)=>{
-  if(ratings === 0){
+  if(ratings === 0||ratings===''){
     return secondFiltered
   }
   return filter.ratings <= ratings;
 })
 const forthFiltered = thirdFiltered.filter((filter)=>{
-  if(type === 'all'){
+  if(type === 'all'||type===''){
     return thirdFiltered
   }
   return filter.type.toLocaleLowerCase() === type.toLocaleLowerCase();
 })
 
-setInfo(forthFiltered)
+setSearchInfo(forthFiltered)
 navigate(`/${id}`)
+
 
 }
 
 
   return (
    <main className='hero-main'>
-   <Navbar/>
+   <Navbar setLogged={setLogged} logged={logged} setTab={setTab} tab={tab} setAccountAccess={setAccountAccess}/>
    <section className='hero'>
         <h1>A lifetime discount? it's genius</h1>
         <p className='header-p'>Get an instants reward for your travels, – unlock instant savings of 10% or
@@ -113,9 +126,7 @@ navigate(`/${id}`)
     </select>
     <div className='dates'>
       <input type='date' onChange={(e)=>setDates((prev)=>{return {...prev,startDate:e.target.value}})} value={dates.startDate} placeholder='Start Date'/>
-      <span><p>To</p></span>
-      <input type='date' onChange={(e)=>setDates((prev)=>{return {...prev,endDate:e.target.value}})} value={dates.endDate} placeholder='End Date'/>
-    </div>
+      </div>
     <button className='search' onClick={filterAccomodation}>Search</button>
    </div>
    </main>

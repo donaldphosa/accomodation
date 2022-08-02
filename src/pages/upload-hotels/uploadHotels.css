@@ -1,0 +1,20 @@
+.upload-hotel{
+    width: 60%;
+    height: 60%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 3% auto;
+    padding: 3%;
+    -webkit-box-shadow: 0px 4px 14px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 14px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 14px 1px rgba(0,0,0,0.75);
+    z-index: 20;
+}
+.upload-hotel>input{
+    margin-bottom: 20px;
+}
+.upload-hotel>h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
